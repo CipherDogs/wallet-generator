@@ -3,7 +3,7 @@ Address generator in Rust
 
 ## Install
 
-If you have Rust: `cargo install walletgen`.
+If you have Rust: `cargo install walletgen`
 
 ## Usage
 
