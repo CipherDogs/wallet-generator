@@ -1,8 +1,8 @@
 [package]
-name = "wallet-generator"
+name = "walletgen"
 version = "0.1.0"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
-description = "Address generator for Acryl or Waves"
+description = "CLI address generator for Acryl or Waves"
 edition = "2018"
 license = "GPL-3.0"
 readme = "README.md"
