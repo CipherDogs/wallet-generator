@@ -6,7 +6,7 @@ use generator::*;
 
 fn main() {
     let matches = App::new("walletgen")
-        .version("0.1.0")
+        .version("0.1.2")
         .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
         .about("CLI address generator for Acryl or Waves")
         .arg(

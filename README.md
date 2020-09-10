@@ -8,7 +8,7 @@ If you have Rust: `cargo install walletgen`
 ## Usage
 
 ```bash
-walletgen 0.1.0
+walletgen 0.1.2
 DEADBLACKCLOVER <deadblackclover@protonmail.com>
 CLI address generator for Acryl or Waves
 
