@@ -1,6 +1,6 @@
 [package]
 name = "walletgen"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
 description = "CLI address generator for Acryl or Waves"
 edition = "2018"
@@ -12,5 +12,5 @@ keywords = ["address", "blockchain", "acryl", "waves"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-acryl = "0.4.1"
+acryl = "0.4.2"
 clap = "2.33.0"
