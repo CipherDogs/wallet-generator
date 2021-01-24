@@ -1,4 +1,4 @@
-use clap::{App, Arg};
+use clap::{App, Arg, SubCommand};
 
 mod cyber_generator;
 
@@ -7,6 +7,7 @@ fn main() {
         .version("0.2.0")
         .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
         .about("Generator of addresses and mnemonic phrases for blockchains")
+        .subcommand(SubCommand::with_name("cyber").about("cyber blockchain"))
         .arg(
             Arg::with_name("count")
                 .short("c")
@@ -20,11 +21,13 @@ fn main() {
     let count = count_arg.parse().unwrap();
 
     for i in 0..count {
-        let acc = cyber_generator::generate();
+        if let Some(_) = matches.subcommand_matches("cyber") {
+            let acc = cyber_generator::generate();
 
-        println!("# {}", i + 1);
-        println!("address: {}", acc.address);
-        println!("mnemonic: {}", acc.mnemonic);
-        println!("---------------------------------------------------");
+            println!("# {}", i + 1);
+            println!("address: {}", acc.address);
+            println!("mnemonic: {}", acc.mnemonic);
+            println!("---------------------------------------------------");
+        }
     }
 }
