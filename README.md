@@ -11,18 +11,21 @@ If you have Rust: `cargo install walletgen`
 ## Usage
 
 ```bash
-walletgen 0.1.2
+walletgen 0.2.0
 DEADBLACKCLOVER <deadblackclover@protonmail.com>
-CLI address generator for Acryl or Waves
+Generator of addresses and mnemonic phrases for blockchains
 
 USAGE:
-    walletgen [OPTIONS]
+    walletgen [OPTIONS] [SUBCOMMAND]
 
 FLAGS:
     -h, --help       Prints help information
     -V, --version    Prints version information
 
 OPTIONS:
-    -i, --chain <CHAR>    Sets a chainID blockchain
-    -c, --count <INT>     Sets a address generate count
+    -c, --count <INT>    Sets a address generate count
+
+SUBCOMMANDS:
+    cyber    cyber blockchain
+    help     Prints this message or the help of the given subcommand(s)
 ```
