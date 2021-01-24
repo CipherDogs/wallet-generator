@@ -1,16 +1,29 @@
 [package]
 name = "walletgen"
-version = "0.1.3"
+version = "0.2.0"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
-description = "CLI address generator for Acryl or Waves"
+description = "Generator of addresses and mnemonic phrases for blockchains"
 edition = "2018"
 license = "GPL-3.0"
 readme = "README.md"
 homepage = "https://github.com/CipherDogs/wallet-generator"
 repository = "https://github.com/CipherDogs/wallet-generator"
-keywords = ["address", "blockchain", "acryl", "waves"]
+keywords = ["address", "blockchain", "cyber"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-acryl = "0.4.2"
 clap = "2.33.0"
+cyber = "0.1.3"
+
+[package.metadata.deb]
+maintainer = "DEADBLACKCLOVER <deadblackclover@protonmail.com>"
+copyright = "2020, DEADBLACKCLOVER <deadblackclover@protonmail.com>"
+license-file = ["LICENSE", "0"]
+extended-description = "Generator of addresses and mnemonic phrases for blockchains"
+depends = "$auto"
+section = "utils"
+priority = "optional"
+assets = [
+    ["target/release/walletgen", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/walletgen/README", "644"],
+]
