@@ -8,6 +8,8 @@ Generator of addresses and mnemonic phrases for blockchains
 
 If you have Rust: `cargo install walletgen`
 
+If you have Debian/Ubuntu: [Releases](https://github.com/CipherDogs/wallet-generator/releases)
+
 ## Usage
 
 ```bash
