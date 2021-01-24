@@ -1,5 +1,8 @@
 # wallet-generator
-Address generator in Rust
+
+![crates.io](https://img.shields.io/crates/v/walletgen.svg)
+
+Generator of addresses and mnemonic phrases for blockchains
 
 ## Install
 
