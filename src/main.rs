@@ -1,6 +1,7 @@
 use clap::{App, Arg, SubCommand};
 
 mod cyber_generator;
+mod mnemonic;
 
 fn main() {
     let matches = App::new("walletgen")
