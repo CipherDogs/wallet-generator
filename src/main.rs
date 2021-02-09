@@ -1,5 +1,7 @@
 use clap::{App, Arg, SubCommand};
+use wallet_gen::coin::Coin;
 
+mod coin_generator;
 mod cyber_generator;
 mod mnemonic;
 
@@ -9,6 +11,9 @@ fn main() {
         .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
         .about("Generator of addresses and mnemonic phrases for blockchains")
         .subcommand(SubCommand::with_name("cyber").about("cyber blockchain"))
+        .subcommand(SubCommand::with_name("bitcoin").about("Bitcoin blockchain"))
+        .subcommand(SubCommand::with_name("ethereum").about("Ethereum blockchain"))
+        .subcommand(SubCommand::with_name("monero").about("Monero blockchain"))
         .arg(
             Arg::with_name("count")
                 .short("c")
@@ -28,7 +33,29 @@ fn main() {
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
             println!("mnemonic: {}", acc.mnemonic);
-            println!("---------------------------------------------------");
+        } else if let Some(_) = matches.subcommand_matches("bitcoin") {
+            let acc = coin_generator::generate(Coin::Bitcoin);
+
+            println!("# {}", i + 1);
+            println!("address: {}", acc.address);
+            println!("public key: {}", acc.public_key);
+            println!("private key: {}", acc.private_key);
+        } else if let Some(_) = matches.subcommand_matches("ethereum") {
+            let acc = coin_generator::generate(Coin::Ethereum);
+
+            println!("# {}", i + 1);
+            println!("address: {}", acc.address);
+            println!("public key: 0x{}", acc.public_key);
+            println!("private key: 0x{}", acc.private_key);
+        } else if let Some(_) = matches.subcommand_matches("monero") {
+            let acc = coin_generator::generate(Coin::Monero);
+
+            println!("# {}", i + 1);
+            println!("address: {}", acc.address);
+            println!("public key: {}", acc.public_key);
+            println!("private key: {}", acc.private_key);
         }
+
+        println!("---------------------------------------------------");
     }
 }

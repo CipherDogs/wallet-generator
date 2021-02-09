@@ -15,6 +15,7 @@ keywords = ["address", "blockchain", "cyber"]
 clap = "2.33.0"
 cyber = "0.1.3"
 tiny-bip39 = "0.7.3"
+wallet-gen = "0.4.1"
 
 [package.metadata.deb]
 maintainer = "DEADBLACKCLOVER <deadblackclover@protonmail.com>"
