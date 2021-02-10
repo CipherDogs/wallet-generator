@@ -13,7 +13,7 @@ If you have Debian/Ubuntu: [Releases](https://github.com/CipherDogs/wallet-gener
 ## Usage
 
 ```bash
-walletgen 0.2.0
+walletgen 1.0.0
 DEADBLACKCLOVER <deadblackclover@protonmail.com>
 Generator of addresses and mnemonic phrases for blockchains
 
@@ -28,6 +28,11 @@ OPTIONS:
     -c, --count <INT>    Sets a address generate count
 
 SUBCOMMANDS:
-    cyber    cyber blockchain
-    help     Prints this message or the help of the given subcommand(s)
+    bitcoin     Bitcoin blockchain
+    cyber       cyber blockchain
+    ethereum    Ethereum blockchain
+    help        Prints this message or the help of the given subcommand(s)
+    kusama      Kusama blockchain
+    monero      Monero blockchain
+    polkadot    Polkadot blockchain
 ```
