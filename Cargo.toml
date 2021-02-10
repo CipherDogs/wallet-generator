@@ -1,6 +1,6 @@
 [package]
 name = "walletgen"
-version = "0.2.0"
+version = "1.0.0"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
 description = "Generator of addresses and mnemonic phrases for blockchains"
 edition = "2018"
@@ -8,7 +8,7 @@ license = "GPL-3.0"
 readme = "README.md"
 homepage = "https://github.com/CipherDogs/wallet-generator"
 repository = "https://github.com/CipherDogs/wallet-generator"
-keywords = ["address", "blockchain", "cyber"]
+keywords = ["address", "blockchain", "cyber", "bitcoin", "ethereum", "monero", "polkadot", "kusama"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]

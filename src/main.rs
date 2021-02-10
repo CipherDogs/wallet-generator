@@ -7,7 +7,7 @@ mod polkadot_generator;
 
 fn main() {
     let matches = App::new("walletgen")
-        .version("0.2.0")
+        .version("1.0.0")
         .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
         .about("Generator of addresses and mnemonic phrases for blockchains")
         .subcommand(SubCommand::with_name("cyber").about("cyber blockchain"))
