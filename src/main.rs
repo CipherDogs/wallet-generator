@@ -3,7 +3,7 @@ use wallet_gen::coin::Coin;
 
 mod coin_generator;
 mod cyber_generator;
-mod mnemonic;
+mod polkadot_generator;
 
 fn main() {
     let matches = App::new("walletgen")
@@ -14,6 +14,8 @@ fn main() {
         .subcommand(SubCommand::with_name("bitcoin").about("Bitcoin blockchain"))
         .subcommand(SubCommand::with_name("ethereum").about("Ethereum blockchain"))
         .subcommand(SubCommand::with_name("monero").about("Monero blockchain"))
+        .subcommand(SubCommand::with_name("polkadot").about("Polkadot blockchain"))
+        .subcommand(SubCommand::with_name("kusama").about("Kusama blockchain"))
         .arg(
             Arg::with_name("count")
                 .short("c")
@@ -54,6 +56,24 @@ fn main() {
             println!("address: {}", acc.address);
             println!("public key: {}", acc.public_key);
             println!("private key: {}", acc.private_key);
+        } else if let Some(_) = matches.subcommand_matches("polkadot") {
+            let acc = polkadot_generator::generate(0 as u8);
+
+            println!("# {}", i + 1);
+            println!("address: {}", acc.address);
+            println!("mnemonic: {}", acc.mnemonic_phrase);
+            println!("public key: {}", acc.public_key);
+            println!("mini secret key: {}", acc.mini_secret_key);
+        } else if let Some(_) = matches.subcommand_matches("kusama") {
+            let acc = polkadot_generator::generate(2 as u8);
+
+            println!("# {}", i + 1);
+            println!("address: {}", acc.address);
+            println!("mnemonic: {}", acc.mnemonic_phrase);
+            println!("public key: {}", acc.public_key);
+            println!("mini secret key: {}", acc.mini_secret_key);
+        } else {
+            break;
         }
 
         println!("---------------------------------------------------");

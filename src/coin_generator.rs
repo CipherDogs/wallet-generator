@@ -8,7 +8,7 @@ pub struct CoinAddress {
     pub private_key: String,
 }
 
-/// Generate Monero address
+/// Generate Bitcoin, Ethereum, Monero address
 pub fn generate(coin: Coin) -> CoinAddress {
     let wallet;
 
