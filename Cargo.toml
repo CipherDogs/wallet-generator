@@ -8,7 +8,7 @@ license = "GPL-3.0"
 readme = "README.md"
 homepage = "https://github.com/CipherDogs/wallet-generator"
 repository = "https://github.com/CipherDogs/wallet-generator"
-keywords = ["address", "blockchain", "cyber", "bitcoin", "ethereum", "monero", "polkadot", "kusama"]
+keywords = ["address", "blockchain", "cyber", "bitcoin", "polkadot"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
