@@ -15,7 +15,7 @@ keywords = ["address", "blockchain", "cyber", "bitcoin", "polkadot"]
 clap = "2.34.0"
 cyber = "0.1.4"
 data-encoding = "2.3.2"
-sp-core = "2.0.1"
+sp-core = "6.0.0"
 wallet-gen = "0.4.1"
 
 [package.metadata.deb]

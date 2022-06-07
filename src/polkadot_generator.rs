@@ -16,7 +16,7 @@ pub struct PolkadotAddress {
 pub fn generate(ss58format: u8) -> PolkadotAddress {
     let (pair, phrase, secret) = sp_core::sr25519::Pair::generate_with_phrase(None);
     let address = AccountId32::from(pair.public())
-        .to_ss58check_with_version(Ss58AddressFormat::Custom(ss58format));
+        .to_ss58check_with_version(Ss58AddressFormat::custom(ss58format.into()));
     PolkadotAddress {
         mnemonic_phrase: phrase,
         mini_secret_key: HEXLOWER.encode(&secret),

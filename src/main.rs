@@ -29,43 +29,43 @@ fn main() {
     let count = count_arg.parse().unwrap();
 
     for i in 0..count {
-        if let Some(_) = matches.subcommand_matches("cyber") {
+        if matches.subcommand_matches("cyber").is_some() {
             let acc = cyber_generator::generate();
 
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
             println!("mnemonic: {}", acc.mnemonic);
-        } else if let Some(_) = matches.subcommand_matches("bitcoin") {
+        } else if matches.subcommand_matches("bitcoin").is_some() {
             let acc = coin_generator::generate(Coin::Bitcoin);
 
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
             println!("public key: {}", acc.public_key);
             println!("private key: {}", acc.private_key);
-        } else if let Some(_) = matches.subcommand_matches("ethereum") {
+        } else if matches.subcommand_matches("ethereum").is_some() {
             let acc = coin_generator::generate(Coin::Ethereum);
 
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
             println!("public key: 0x{}", acc.public_key);
             println!("private key: 0x{}", acc.private_key);
-        } else if let Some(_) = matches.subcommand_matches("monero") {
+        } else if matches.subcommand_matches("monero").is_some() {
             let acc = coin_generator::generate(Coin::Monero);
 
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
             println!("public key: {}", acc.public_key);
             println!("private key: {}", acc.private_key);
-        } else if let Some(_) = matches.subcommand_matches("polkadot") {
-            let acc = polkadot_generator::generate(0 as u8);
+        } else if matches.subcommand_matches("polkadot").is_some() {
+            let acc = polkadot_generator::generate(0_u8);
 
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
             println!("mnemonic: {}", acc.mnemonic_phrase);
             println!("public key: {}", acc.public_key);
             println!("mini secret key: {}", acc.mini_secret_key);
-        } else if let Some(_) = matches.subcommand_matches("kusama") {
-            let acc = polkadot_generator::generate(2 as u8);
+        } else if matches.subcommand_matches("kusama").is_some() {
+            let acc = polkadot_generator::generate(2_u8);
 
             println!("# {}", i + 1);
             println!("address: {}", acc.address);
