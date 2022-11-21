@@ -4,7 +4,9 @@ use cyber::wallet::{PrivateKeyWallet, PublicKeyWallet};
 /// Address struct
 pub struct CyberAddress {
     pub mnemonic: String,
-    pub address: String,
+    pub cyber_address: String,
+    pub bostrom_address: String,
+    pub pussy_address: String,
 }
 
 /// Generate cyber address
@@ -16,6 +18,8 @@ pub fn generate() -> CyberAddress {
 
     CyberAddress {
         mnemonic: phrase,
-        address: pk.to_address(),
+        cyber_address: pk.to_address("cyber"),
+        bostrom_address: pk.to_address("bostrom"),
+        pussy_address: pk.to_address("pussy"),
     }
 }
