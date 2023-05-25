@@ -16,7 +16,7 @@ clap = "2.34.0"
 cyber = "1.0"
 data-encoding = "2.4"
 sp-core = "20.0.0"
-wallet-gen = { git = "https://github.com/CipherDogs/wallet-gen" }
+wallet-gen = { git = "https://github.com/CipherDogs/wallet-gen", version = "0.4" }
 
 [package.metadata.deb]
 maintainer = "DEADBLACKCLOVER <deadblackclover@protonmail.com>"
