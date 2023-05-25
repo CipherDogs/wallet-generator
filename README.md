@@ -13,7 +13,7 @@ If you have Debian/Ubuntu: [Releases](https://github.com/CipherDogs/wallet-gener
 ## Usage
 
 ```bash
-walletgen 1.1.0
+walletgen 1.1.1
 DEADBLACKCLOVER <deadblackclover@protonmail.com>
 Generator of addresses and mnemonic phrases for blockchains
 
