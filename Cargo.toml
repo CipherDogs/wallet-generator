@@ -1,6 +1,6 @@
 [package]
 name = "walletgen"
-version = "1.1.1"
+version = "1.2.0"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
 description = "Generator of addresses and mnemonic phrases for blockchains"
 edition = "2018"
@@ -12,7 +12,7 @@ keywords = ["address", "blockchain", "cyber", "bitcoin", "polkadot"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-clap = "2.34.0"
+clap = { version = "4", features = ["derive"] }
 cyber = "1.0"
 data-encoding = "2.4"
 sp-core = "20.0.0"
